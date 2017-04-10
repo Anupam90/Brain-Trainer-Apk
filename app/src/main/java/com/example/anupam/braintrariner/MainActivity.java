@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void playAgain(View view)
     {
+        //playAgainButton.setVisibility(View.VISIBLE);
+        sumTextView.setVisibility(View.VISIBLE);
         gridLayout.setVisibility(View.VISIBLE);
         score = 0;
         numberOfQuestions = 0;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                sumTextView.setVisibility(View.INVISIBLE);
                 playAgainButton.setVisibility(View.VISIBLE);
                 gridLayout.setVisibility(View.INVISIBLE);
                 timerTextView.setText("0s");
