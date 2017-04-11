@@ -4,11 +4,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/images"
-        android:label="Brain Trainer"
+        android:icon="@drawable/braintrainer"
+        android:label="Brain  Trainer"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>

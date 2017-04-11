@@ -1,8 +1,12 @@
 package com.example.anupam.braintrariner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -137,5 +141,24 @@ public class MainActivity extends AppCompatActivity {
         playAgainButton = (Button) findViewById(R.id.playAgainButton);
         gameRelativeLayout = (RelativeLayout) findViewById(R.id.gameRelativeLayout);
         gridLayout = (GridLayout) findViewById(R.id.gridLayout);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.itemId:
+                Intent intent = new Intent(MainActivity.this, AboutUs.class);
+                startActivity(intent);
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
